@@ -144,8 +144,8 @@ button:hover~.cursor-outline,
 
 .marquee-right .marquee-content {
     animation-direction: reverse;
-    color: var(--color-accent);
-    /* Make the second line pop */
+    color: rgba(255, 255, 255, 0.8);
+    /* Changed from accent to white */
 }
 
 .separator {
@@ -314,7 +314,16 @@ main {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .marquee-container {
-        gap: 0.5rem;
+        gap: 0.25rem;
+        padding-top: 0;
+    }
+
+    .hero {
+        height: 35vh;
+        /* slightly shorter on mobile to pull visual up */
+        justify-content: flex-end;
+        /* Push content down or center? User said "marquees higher", so maybe top/center is better. */
+        padding-bottom: 2rem;
     }
 
     .cursor-dot,
